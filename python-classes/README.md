@@ -50,5 +50,3 @@ Contributions are welcome! If you have suggestions, improvements, or additional 
 
 License
 This project is licensed under the MIT License.
-
-We hope this project helps you grasp the concepts of Python classes and objects effectively. Feel free to reach out with any questions or feedback. Happy coding!
