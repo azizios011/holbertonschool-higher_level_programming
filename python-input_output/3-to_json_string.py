@@ -1,25 +1,24 @@
 #!/usr/bin/python3
-"""This function takes one parameter, 'my_obj',
-which is the object (string) to be converted to JSON."""
+""" the 'to_json_string' implementation. """
+
+
+import json
 
 
 def to_json_string(my_obj):
+    """
+    Convert a Python object to its JSON string representation.
 
-    """Inside the function, we first check if the 'my_obj'
-    is an instance of a string using the 'isinstance' function."""
+    Args:
+        my_obj (object): The Python object to be converted.
 
-    if isinstance(my_obj, str):
+    Returns:
+        str: The JSON string representation of the object.
+    """
+    json_string = json.dumps(my_obj)
 
-        """ If it is a string, we wrap it in double quotes
-        and escape any double quotes within the string
-        by replacing them with '\"'."""
+    """ Use the json.dumps() function to convert the object to JSON string."""
 
-        return '"' + my_obj.replace('"', '\\"') + '"'
+    """Return the JSON string."""
 
-    """If the 'my_obj' is not a string, we raise a 'TypeError'
-    with a descriptive message indicating that the object
-    is not JSON serializable."""
-
-    else:
-        raise TypeError
-    ("{} is not JSON serializable".format(type(my_obj).__name__))
+    return json_string
