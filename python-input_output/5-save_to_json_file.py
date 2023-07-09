@@ -17,7 +17,7 @@ def save_to_json_file(my_obj, filename):
     with open(filename, mode='w', encoding='utf-8') as file:
 
         """We convert the 'my_obj' object to a JSON string using
-        the 'to_json_string' function,"""
+        the 'json.dumps' function,"""
 
         json_str = json.dumps(my_obj)
 
