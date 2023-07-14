@@ -19,7 +19,7 @@ class BaseGeometry:
         if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
 
-        """If value is an integer but is less than or equal to 0,
+        """If value is an integer but is less than or equal to 0,/
         it raises a ValueError exception with the specified message."""
 
         if value <= 0:
