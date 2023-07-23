@@ -1,26 +1,15 @@
 #!/usr/bin/python3
-"""the Rectangle class inherit it from BaseGeometry."""
-
-
+"""import parent classes from the file 7-base_geometry.py """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """define the fields and methods here"""
+    """Creates a Rectangle class with height and width """
 
-
-class Rectangle(BaseGeometry):
     def __init__(self, width, height):
-
-        """validate the 'width' and 'height' parameters using
-        the 'integer_validator' method inherited
-        from the 'BaseGeometry' class."""
+        """ init constructor method """
 
         self.integer_validator("width", width)
-        self.integer_validator("height", height)
-
-        """ If the validation passes, the 'width' and 'height' are assigned
-        to private attributes '__width' and '__height', respectively."""
-
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
