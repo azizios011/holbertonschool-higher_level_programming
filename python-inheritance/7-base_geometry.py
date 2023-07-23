@@ -1,26 +1,29 @@
 #!/usr/bin/python3
-"""class BaseGeometry"""
+""" an empty class BaseGeometry """
 
 
 class BaseGeometry:
+    """ Function that raises an error message """
+
     def area(self):
-        """ Since the area() method is not
-        implemented in the BaseGeometry class,
-        it will raise an exception, and the script will catch
-        and print the exception message."""
+        """Public instance method that raises an error message """
+
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
+        """method that is in charge of validating the received value
 
-        """checks if value is an integer using isinstance(value, int).
-        If it's not, it raises a TypeError
-        exception with the specified message."""
+        Args:
+            name (str): name
+            value (int): value to be evaluated
 
-        if not isinstance(value, int):
-            raise TypeError("{} must be an integer".format(name))
+        Return:
+            error messages for each case
+        """
 
-        """If value is an integer but is less than or equal to 0,/
-        it raises a ValueError exception with the specified message."""
-
+        self.name = name
+        self.value = value
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(self.name))
         if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+            raise ValueError(f"{self.name} must be greater than 0")
