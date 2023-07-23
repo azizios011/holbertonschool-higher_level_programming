@@ -1,10 +1,18 @@
 #!/usr/bin/python3
-"""define class Mylist that inherite from class list"""
+"""class MyList that inherits from list
+"""
 
 
 class MyList(list):
-    """define fields and metod of my class"""
+    """Class  that inherits from list"""
 
     def print_sorted(self):
-        """print sorted list"""
+        """prints the list, but sorted (ascending sort)
+
+        Args:
+            list (list): legacy list
+
+        Return:
+            list sorted in ascending order
+        """
         print(sorted(self))
