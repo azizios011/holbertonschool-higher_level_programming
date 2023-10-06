@@ -1,3 +1,5 @@
+// switching between classes.
+
 // declare a constant varaible that get an elements by id.
 const element = document.getElementById("toggle_header");
 // declare a constant varaible that select an elements.
